@@ -1,15 +1,26 @@
 const mongoose = require('mongoose')
 
 const schema = mongoose.Schema({
-    name : String,
-    tag : String,
+    nom : String,
+    mot_de_passe : String,
     email : String,
-    password : String,
     image : String,
-    couverture: String,
+
+    ville : String,
+    tele : String,
+    anniversaire : String,
+    genre : String,
+    email_contact : String,
+    
+    ville_partnership : Boolean,
+    tele_partnership : Boolean,
+    email_partnership : Boolean,
+    anniversaire_partnership : Boolean,
+
     verif_code : String,
-    validation : Number
+    validation : Boolean,
+    active: Boolean,
 })
 
-module.exports = mongoose.model('utilisateur' , schema)
+module.exports = mongoose.model('Etudiant' , schema)
 
